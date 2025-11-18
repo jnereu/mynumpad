@@ -4,159 +4,159 @@
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-**MyNumpad Keyboard Mapper** é uma aplicação Windows que mapeia teclas do teclado numérico (numpad) para atalhos de teclado personalizados, aumentando a produtividade ao permitir acesso rápido a comandos frequentemente usados.
+**MyNumpad Keyboard Mapper** is a Windows application that maps numpad keys to custom keyboard shortcuts, boosting productivity by allowing quick access to frequently used commands.
 
-## 📋 Descrição do Projeto
+## 📋 Project Description
 
-Este projeto foi desenvolvido para resolver o problema de acesso rápido a atalhos de teclado comuns durante o trabalho. Usando um teclado numérico dedicado ou o numpad do teclado principal, você pode executar comandos como copiar, colar, salvar, desfazer, e muito mais com apenas uma tecla.
+This project was developed to solve the problem of quick access to common keyboard shortcuts during work. Using a dedicated numeric keypad or the main keyboard's numpad, you can execute commands like copy, paste, save, undo, and much more with just one key.
 
-A aplicação funciona através de um **keyboard hook de baixo nível** que intercepta teclas específicas do numpad e as transforma em combinações de teclas (como Ctrl+C, Ctrl+V, etc.).
+The application works through a **low-level keyboard hook** that intercepts specific numpad keys and transforms them into key combinations (like Ctrl+C, Ctrl+V, etc.).
 
-### Características Principais
+### Key Features
 
-- ✨ **Mapeamento personalizável** - Configure qualquer tecla do numpad para qualquer atalho
-- 💾 **Salvar/Carregar configurações** - Suas configurações são salvas em formato JSON
-- 🎯 **Interface intuitiva** - Grid editável para fácil configuração
-- 🔔 **Minimizar para system tray** - Fica discretamente na bandeja do sistema
-- 🚀 **Iniciar com Windows** - Opção de autostart
-- 📊 **Monitoramento em tempo real** - Veja as teclas sendo pressionadas
-- 🛠️ **Múltiplos atalhos suportados** - Ctrl, Alt, Win, e combinações
+- ✨ **Customizable mapping** - Configure any numpad key to any shortcut
+- 💾 **Save/Load settings** - Your settings are saved in JSON format
+- 🎯 **Intuitive interface** - Editable grid for easy configuration
+- 🔔 **Minimize to system tray** - Stays discreetly in the system tray
+- 🚀 **Start with Windows** - Autostart option
+- 📊 **Real-time monitoring** - See which keys are being pressed
+- 🛠️ **Multiple shortcuts supported** - Ctrl, Alt, Win, and combinations
 
-## 🎯 Funcionalidades
+## 🎯 Features
 
-### Funcionalidades Atuais
+### Current Features
 
-1. **Mapeamento de Teclas**
+1. **Key Mapping**
    - Numpad 0-9
-   - Teclas especiais (+, -, *, /, .)
-   - Suporte para 15+ atalhos pré-definidos
+   - Special keys (+, -, *, /, .)
+   - Support for 15+ pre-defined shortcuts
 
-2. **Atalhos Suportados**
-   - `CTRL+C` - Copiar
-   - `CTRL+V` - Colar
-   - `CTRL+X` - Cortar
-   - `CTRL+Z` - Desfazer
-   - `CTRL+Y` - Refazer
-   - `CTRL+A` - Selecionar Tudo
-   - `CTRL+S` - Salvar
-   - `CTRL+F` - Encontrar
-   - `CTRL+N` - Novo
-   - `CTRL+O` - Abrir
-   - `CTRL+P` - Imprimir
-   - `CTRL+W` - Fechar
-   - `CTRL+T` - Nova Aba
-   - `CTRL+SHIFT+S` - Salvar Como
+2. **Supported Shortcuts**
+   - `CTRL+C` - Copy
+   - `CTRL+V` - Paste
+   - `CTRL+X` - Cut
+   - `CTRL+Z` - Undo
+   - `CTRL+Y` - Redo
+   - `CTRL+A` - Select All
+   - `CTRL+S` - Save
+   - `CTRL+F` - Find
+   - `CTRL+N` - New
+   - `CTRL+O` - Open
+   - `CTRL+P` - Print
+   - `CTRL+W` - Close
+   - `CTRL+T` - New Tab
+   - `CTRL+SHIFT+S` - Save As
 
-3. **Gerenciamento de Configurações**
-   - Salvar configurações personalizadas
-   - Carregar configurações salvas
-   - Resetar para padrões
-   - Exportar/Importar via JSON
+3. **Settings Management**
+   - Save custom settings
+   - Load saved settings
+   - Reset to defaults
+   - Export/Import via JSON
 
-4. **Interface do Usuário**
-   - Grid editável para mapeamentos
-   - Indicador de status em tempo real
-   - Menu completo (File, Help)
+4. **User Interface**
+   - Editable grid for mappings
+   - Real-time status indicator
+   - Complete menu (File, Help)
    - System tray integration
 
-5. **Opções**
-   - Minimizar para system tray
-   - Iniciar com Windows
-   - Notificações do sistema
+5. **Options**
+   - Minimize to system tray
+   - Start with Windows
+   - System notifications
 
-## 🚀 Como Rodar Localmente
+## 🚀 How to Run Locally
 
-### Pré-requisitos
+### Prerequisites
 
 - **Windows 10/11** (64-bit)
-- **.NET 6.0 SDK ou superior** - [Download aqui](https://dotnet.microsoft.com/download/dotnet/6.0)
-- **Visual Studio 2022** (opcional, mas recomendado) ou **Visual Studio Code**
+- **.NET 6.0 SDK or higher** - [Download here](https://dotnet.microsoft.com/download/dotnet/6.0)
+- **Visual Studio 2022** (optional, but recommended) or **Visual Studio Code**
 
-### Instalação
+### Installation
 
-1. **Clone o repositório**
+1. **Clone the repository**
    ```bash
-   git clone https://github.com/seu-usuario/mynumpad.git
+   git clone https://github.com/your-username/mynumpad.git
    cd mynumpad
    ```
 
-2. **Restaure as dependências**
+2. **Restore dependencies**
    ```bash
    dotnet restore
    ```
 
-3. **Compile o projeto**
+3. **Build the project**
    ```bash
    dotnet build src/mynumpad/mynumpad.csproj --configuration Release
    ```
 
-4. **Execute a aplicação**
+4. **Run the application**
    ```bash
    dotnet run --project src/mynumpad/mynumpad.csproj
    ```
 
-   Ou compile e execute o executável diretamente:
+   Or build and run the executable directly:
    ```bash
    cd src/mynumpad/bin/Release/net6.0-windows
    ./MyNumpad.exe
    ```
 
-### Usando o Visual Studio
+### Using Visual Studio
 
-1. Abra o arquivo `mynumpad.sln` no Visual Studio 2022
-2. Pressione `F5` para compilar e executar em modo debug
-3. Ou use `Ctrl+Shift+B` para compilar e depois execute manualmente
+1. Open the `mynumpad.sln` file in Visual Studio 2022
+2. Press `F5` to build and run in debug mode
+3. Or use `Ctrl+Shift+B` to build and then run manually
 
-## 📖 Como Usar
+## 📖 How to Use
 
-### Configuração Básica
+### Basic Configuration
 
-1. **Inicie a aplicação** - A janela principal será exibida com mapeamentos padrão
-2. **Configure seus mapeamentos**:
-   - Na grid, selecione a tecla do Numpad (coluna 1)
-   - Escolha o atalho desejado (coluna 2)
-   - Adicione uma descrição opcional (coluna 3)
-3. **Clique em "Start Mapping"** para ativar o hook do teclado
-4. **Teste** - Pressione as teclas do numpad para executar os atalhos
-5. **Salve as configurações** - Clique em "Save Settings" ou use File > Save Settings
+1. **Start the application** - The main window will be displayed with default mappings
+2. **Configure your mappings**:
+   - In the grid, select the Numpad key (column 1)
+   - Choose the desired shortcut (column 2)
+   - Add an optional description (column 3)
+3. **Click "Start Mapping"** to activate the keyboard hook
+4. **Test** - Press numpad keys to execute shortcuts
+5. **Save settings** - Click "Save Settings" or use File > Save Settings
 
-### Opções Avançadas
+### Advanced Options
 
-#### Minimizar para System Tray
-- Marque "Minimize to system tray"
-- Ao minimizar, o aplicativo ficará na bandeja do sistema
-- Clique duas vezes no ícone para restaurar
+#### Minimize to System Tray
+- Check "Minimize to system tray"
+- When minimized, the application will stay in the system tray
+- Double-click the icon to restore
 
-#### Iniciar com Windows
-- Marque "Start with Windows"
-- Clique em "Save Settings"
-- O aplicativo será executado automaticamente no login
+#### Start with Windows
+- Check "Start with Windows"
+- Click "Save Settings"
+- The application will run automatically on login
 
-#### Localização dos Arquivos de Configuração
-- As configurações são salvas em: `%APPDATA%\MyNumpad\settings.json`
-- Acesse via menu: Help > Settings Location
+#### Configuration File Location
+- Settings are saved in: `%APPDATA%\MyNumpad\settings.json`
+- Access via menu: Help > Settings Location
 
-## 🏗️ Estrutura do Projeto
+## 🏗️ Project Structure
 
 ```
 mynumpad/
 ├── src/
 │   └── mynumpad/
 │       ├── Config/
-│       │   └── AppSettings.cs          # Gerenciamento de configurações
+│       │   └── AppSettings.cs          # Settings management
 │       ├── Properties/
 │       ├── Resources/
-│       ├── MainForm.cs                 # Formulário principal
-│       ├── MainForm.Designer.cs        # Designer do formulário
+│       ├── MainForm.cs                 # Main form
+│       ├── MainForm.Designer.cs        # Form designer
 │       ├── Program.cs                  # Entry point
-│       └── mynumpad.csproj             # Arquivo de projeto
+│       └── mynumpad.csproj             # Project file
 ├── mynumpad.sln                        # Solution file
 └── README.md
 ```
 
-## 🔧 Configuração JSON
+## 🔧 JSON Configuration
 
-As configurações são salvas em formato JSON:
+Settings are saved in JSON format:
 
 ```json
 {
@@ -180,120 +180,120 @@ As configurações são salvas em formato JSON:
 }
 ```
 
-## 💡 Ideias para Expandir
+## 💡 Ideas for Expansion
 
-### Funcionalidades Futuras
+### Future Features
 
-#### 🌐 Backend e Sincronização
-- [ ] **API REST** para sincronizar configurações entre dispositivos
-- [ ] **Cloud storage** (Google Drive, Dropbox) para backup automático
-- [ ] **Perfis de configuração** - diferentes perfis para diferentes aplicativos
-- [ ] **Banco de dados** para histórico de uso e estatísticas
+#### 🌐 Backend and Synchronization
+- [ ] **REST API** to sync settings across devices
+- [ ] **Cloud storage** (Google Drive, Dropbox) for automatic backup
+- [ ] **Configuration profiles** - different profiles for different applications
+- [ ] **Database** for usage history and statistics
 
-#### 🔐 Autenticação e Multi-usuário
-- [ ] Sistema de login/registro
-- [ ] Perfis de usuário
-- [ ] Compartilhamento de configurações entre usuários
-- [ ] Configurações por aplicativo (diferente para VS Code, Chrome, etc.)
+#### 🔐 Authentication and Multi-user
+- [ ] Login/registration system
+- [ ] User profiles
+- [ ] Share configurations between users
+- [ ] Per-application settings (different for VS Code, Chrome, etc.)
 
-#### 🎨 Interface e UX
-- [ ] **Temas** - Dark mode, light mode, temas personalizados
-- [ ] **Drag-and-drop** na grid para reordenar mapeamentos
-- [ ] **Atalhos visuais** - Preview do que cada tecla faz
-- [ ] **Hotkey recorder** - Gravar qualquer combinação de teclas
-- [ ] **Animações** e feedback visual quando teclas são pressionadas
+#### 🎨 Interface and UX
+- [ ] **Themes** - Dark mode, light mode, custom themes
+- [ ] **Drag-and-drop** in grid to reorder mappings
+- [ ] **Visual shortcuts** - Preview of what each key does
+- [ ] **Hotkey recorder** - Record any key combination
+- [ ] **Animations** and visual feedback when keys are pressed
 
-#### 🚀 Recursos Avançados
-- [ ] **Macros** - Sequências de comandos
-- [ ] **Scripts personalizados** - Execute scripts quando uma tecla é pressionada
-- [ ] **Detecção de aplicativo** - Diferentes mapeamentos para diferentes apps
-- [ ] **Perfis automáticos** - Muda perfil baseado no app ativo
-- [ ] **Estatísticas de uso** - Quais atalhos você mais usa
-- [ ] **Suporte para outros dispositivos** - Mouses programáveis, joysticks
-- [ ] **Layers** - Múltiplas camadas de mapeamentos (como vim)
+#### 🚀 Advanced Features
+- [ ] **Macros** - Command sequences
+- [ ] **Custom scripts** - Execute scripts when a key is pressed
+- [ ] **Application detection** - Different mappings for different apps
+- [ ] **Automatic profiles** - Change profile based on active app
+- [ ] **Usage statistics** - Which shortcuts you use most
+- [ ] **Support for other devices** - Programmable mice, joysticks
+- [ ] **Layers** - Multiple mapping layers (like vim)
 
-#### 📱 Multiplataforma
-- [ ] **Versão Linux** usando X11 ou Wayland
-- [ ] **Versão MacOS** usando CGEvent
-- [ ] **App mobile** para configuração remota (iOS/Android)
-- [ ] **Web app** para gerenciar configurações
+#### 📱 Cross-platform
+- [ ] **Linux version** using X11 or Wayland
+- [ ] **MacOS version** using CGEvent
+- [ ] **Mobile app** for remote configuration (iOS/Android)
+- [ ] **Web app** to manage settings
 
-#### 🔌 Integrações
-- [ ] **Discord/Slack integration** - Executar comandos via bots
-- [ ] **IFTTT/Zapier** - Automações
-- [ ] **Smart Home** - Controle dispositivos IoT
-- [ ] **API pública** - Permitir outros apps se integrarem
+#### 🔌 Integrations
+- [ ] **Discord/Slack integration** - Execute commands via bots
+- [ ] **IFTTT/Zapier** - Automations
+- [ ] **Smart Home** - Control IoT devices
+- [ ] **Public API** - Allow other apps to integrate
 
-#### 🛡️ Segurança e Privacidade
-- [ ] **Criptografia** de configurações salvas
-- [ ] **Whitelist de aplicativos** - Só funciona em apps específicos
-- [ ] **Blacklist de aplicativos** - Desativa em apps sensíveis (bancos, etc.)
-- [ ] **Log de auditoria** - Registro de todas as teclas mapeadas
+#### 🛡️ Security and Privacy
+- [ ] **Encryption** of saved settings
+- [ ] **Application whitelist** - Only works with specific apps
+- [ ] **Application blacklist** - Disable in sensitive apps (banking, etc.)
+- [ ] **Audit log** - Record all mapped keys
 
-#### 📊 Analytics e Insights
-- [ ] Dashboard de estatísticas de uso
-- [ ] Gráficos de produtividade
-- [ ] Sugestões de mapeamentos baseadas no uso
-- [ ] Exportar dados de uso para análise
+#### 📊 Analytics and Insights
+- [ ] Usage statistics dashboard
+- [ ] Productivity graphs
+- [ ] Mapping suggestions based on usage
+- [ ] Export usage data for analysis
 
-#### 🎮 Gaming e Produtividade
-- [ ] **Perfil para games** - Macros complexos para MMOs
-- [ ] **Streaming integration** - Controles para OBS, Streamlabs
-- [ ] **Edição de vídeo** - Perfis para Premiere, DaVinci Resolve
-- [ ] **CAD/Design** - Perfis para AutoCAD, Photoshop, etc.
+#### 🎮 Gaming and Productivity
+- [ ] **Gaming profiles** - Complex macros for MMOs
+- [ ] **Streaming integration** - Controls for OBS, Streamlabs
+- [ ] **Video editing** - Profiles for Premiere, DaVinci Resolve
+- [ ] **CAD/Design** - Profiles for AutoCAD, Photoshop, etc.
 
-### Melhorias Técnicas
+### Technical Improvements
 
 #### Performance
-- [ ] Otimização do keyboard hook
-- [ ] Cache de configurações
-- [ ] Lazy loading de recursos
+- [ ] Keyboard hook optimization
+- [ ] Settings cache
+- [ ] Lazy loading of resources
 
-#### Código
+#### Code
 - [ ] Unit tests
 - [ ] Integration tests
 - [ ] CI/CD pipeline (GitHub Actions)
 - [ ] Code coverage
-- [ ] Documentação XML completa
-- [ ] Logging estruturado (Serilog, NLog)
+- [ ] Complete XML documentation
+- [ ] Structured logging (Serilog, NLog)
 
-#### Distribuição
+#### Distribution
 - [ ] Installer (WiX, Inno Setup)
 - [ ] Auto-update (Squirrel.Windows)
 - [ ] Microsoft Store
 - [ ] Portable version (single exe)
-- [ ] MSI package para enterprise
+- [ ] MSI package for enterprise
 
-## 🤝 Contribuindo
+## 🤝 Contributing
 
-Contribuições são bem-vindas! Para contribuir:
+Contributions are welcome! To contribute:
 
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
+1. Fork the project
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 📝 Licença
+## 📝 License
 
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-## 👨‍💻 Autor
+## 👨‍💻 Author
 
 **MyNumpad Project**
 
-## 🙏 Agradecimentos
+## 🙏 Acknowledgments
 
-- Comunidade .NET
+- .NET Community
 - Windows API documentation
-- Todos os contribuidores
+- All contributors
 
-## 📞 Suporte
+## 📞 Support
 
-Se você encontrar algum problema ou tiver sugestões:
-- Abra uma [issue](https://github.com/seu-usuario/mynumpad/issues)
-- Envie um email: support@mynumpad.com
+If you encounter any issues or have suggestions:
+- Open an [issue](https://github.com/your-username/mynumpad/issues)
+- Send an email: support@mynumpad.com
 
 ---
 
-⌨️ Feito com ❤️ para aumentar sua produtividade!
+⌨️ Made with ❤️ to boost your productivity!
