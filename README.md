@@ -11,7 +11,7 @@
 This project was developed to solve the problem of quick access to common keyboard shortcuts during work. Using a dedicated numeric keypad or the main keyboard's numpad, you can execute commands like copy, paste, save, undo, and much more with just one key.
 
 The application works through a **low-level keyboard hook** that intercepts specific numpad keys and transforms them into key combinations (like Ctrl+C, Ctrl+V, etc.).
-
+![MyNumPad](https://raw.githubusercontent.com/jnereu/mynumpad/refs/heads/jnereu-patch-1/docs/mynumpad.png)
 ### Key Features
 
 - ✨ **Customizable mapping** - Configure any numpad key to any shortcut
